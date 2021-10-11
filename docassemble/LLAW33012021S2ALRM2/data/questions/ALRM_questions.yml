@@ -1,4 +1,6 @@
-question: What is the clients initals?
+question: Please add a way to identify the client?
+subquestion: | 
+  Please add here the clinets intials or a way to indetify them without using their name so you can keep track of what services have been reffered for which client.
 fields:
   - no label: ALRMinitals
 ---
@@ -48,16 +50,18 @@ fields:
   - no label: ALRMlocation
     datatype: checkboxes
     choices:
-      - Metropolitan Adelaide (within a 20km radius): metro
+      - City suburbs: metro
         help: | 
+          - Adelaide
           - Prospect 
-          - Walkerville 
-          - Norwood 
+          - Hindmarsh
+          - Croyden
+          - Bowden
           - Burnside
-      - Port Augusta or Ceduna: APY
+      - Port Augusta, Whyalla or Ceduna: APY
         help: | 
           - Located on the west coast of the gulf of the Eyre Peninsula 
-      - Port Adelaide: port
+      - Port Adelaide region: port
         help: | 
           - North Western Suburbs of Adelaide 
           - Alberton 
@@ -66,5 +70,32 @@ fields:
           - Queenstown 
           - Semaphore South
           - Port Adelaide
-          - Gillman        
+          - Gillman 
+      - Southern Suburbs: south
+        help: | 
+          - Marion
+          - Morphett vale
+          - Seaford
+          - Noarlunga
+          - Aldinga
+      - Northern suburbs: north
+        help: | 
+          - Elizabeth
+          - Sailsbury 
+          - Muno Para
+      - Eastern suburbs: east
+        help: | 
+          - Klemzig
+          - Gillis planes
+          - Ingle farm
+          - Modbury
+      - Mt Gambier region: gambier
+        help: | 
+          - Naracoorte 
+          - Robe
+          - Millicent
+      - Riverland: riverland
+        help: | 
+          - Renmark
+          - Berri
 ---
