@@ -3,6 +3,7 @@ include:
   - ALRM_questions.yml
   - ALRM_iteration.yml
   - ALRM_services_data.yml
+  - ALRM_1.css
 ---
 objects:
   - ALRMselected_services: DAList.using(there_are_any=True, auto_gather=False)
