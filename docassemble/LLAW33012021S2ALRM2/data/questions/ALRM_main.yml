@@ -3,7 +3,6 @@ include:
   - ALRM_questions.yml
   - ALRM_iteration.yml
   - ALRM_services_data.yml
-  - ALRM_1.css
 ---
 objects:
   - ALRMselected_services: DAList.using(there_are_any=True, auto_gather=False)
@@ -13,7 +12,6 @@ code: |
   ALRMdisplay_welcome_screen
   
   ALRMdisplay_final_screen
-  
 ---
 code: |
   ALRMdisplay_welcome_screen = True
@@ -30,6 +28,7 @@ buttons:
 event: ALRMdisplay_final_screen
 question: Here is a list of your services
 subquestion: |
+  
   Thankyou for completing the CSP connect survey.
   
   Question|Answer
@@ -42,8 +41,13 @@ subquestion: |
    
   The referal for ${ALRMinitals} 
   ${ALRMselected_services_table}
-  
-  
+
+attachment:
+  docx template file: ALRMreferral.docx
+  valid formats:
+  - docx
+  - pdf
+    
 buttons:
   - Restart: restart
   - Exit: exit
@@ -67,7 +71,5 @@ columns:
       'From {} to {}'.format(row_item['min_age'], row_item['max_age'])
   - Gender: |
       row_item['gender']
-  - Keyterm: |
-      row_item['keyterm']
 
 ---
