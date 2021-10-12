@@ -28,9 +28,6 @@ buttons:
 event: ALRMdisplay_final_screen
 question: Here is a list of your services
 subquestion: |
-  
-  Thankyou for completing the CSP connect survey.
-  
   Question|Answer
   ---|---
   Client intials|${ALRMinitals}
@@ -38,19 +35,20 @@ subquestion: |
   Gender|${ALRMgender}
   Category|${ALRMkeyterm.true_values()}
   Locations Selected|${ALRMlocation.true_values()}
-   
+     
   The referal for ${ALRMinitals} 
   ${ALRMselected_services_table}
-
+  
 attachment:
   docx template file: ALRMreferral.docx
   valid formats:
-  - docx
   - pdf
-    
+  - docx
+  
 buttons:
   - Restart: restart
   - Exit: exit
+    url: https://alrm.org.au/
 ---
 table: ALRMselected_services_table
 rows: ALRMselected_services
