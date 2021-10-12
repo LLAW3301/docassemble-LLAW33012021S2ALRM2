@@ -24,10 +24,14 @@ subquestion: |
 buttons:
   - I want to continue: continue
   - I do not want to continue: exit
+    url: https://alrm.org.au/
 ---
 event: ALRMdisplay_final_screen
 question: Here is a list of your services
 subquestion: |
+  Thankyou for completing CSP connect
+  
+  
   Question|Answer
   ---|---
   Client intials|${ALRMinitals}
@@ -35,8 +39,11 @@ subquestion: |
   Gender|${ALRMgender}
   Category|${ALRMkeyterm.true_values()}
   Locations Selected|${ALRMlocation.true_values()}
+  
      
   The referal for ${ALRMinitals} 
+  
+  
   ${ALRMselected_services_table}
   
 attachment:
