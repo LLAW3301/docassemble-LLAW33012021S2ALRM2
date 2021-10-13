@@ -13,7 +13,6 @@ code: |
   ALRMdisplay_welcome_screen = True
   force_ask('ALRMwelcome_screen')
 ---
-event: ALRMwelcome_screen
 question: Welcome
 subquestion: |
     Welcome to the Criminal Service Providers ('CPS') Connect Application.
