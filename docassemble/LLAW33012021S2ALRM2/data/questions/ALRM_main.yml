@@ -1,8 +1,14 @@
----
+--- 
+# Theese are added to this .yml file that runs the app to simplify reading
 include:
   - ALRM_questions.yml
   - ALRM_services_data.yml
 ---
+# Not sure if this is needed, Still needs work 
+images:
+  Calendar: calendar.png
+---
+# Code used to process the order of the screens, needed to force ask first screen
 mandatory: True
 code: |
   ALRMdisplay_welcome_screen
@@ -14,9 +20,10 @@ code: |
   force_ask('ALRMwelcome_screen')
 ---
 event: ALRMwelcome_screen
+# Expalin what the App does and how to complete
 question: Welcome
 subquestion: |
-  
+
   Welcome to CSP Connect!
   
   This App has been developed for the Aboriginal Legal Rights Movement (ALRM) and their legal team who need assistance connecting their clients to services which help them get back on track after legal assistance.
@@ -36,33 +43,40 @@ buttons:
   - I do not want to continue: exit
     url: https://alrm.org.au/
 ---
+# Display a summary of the awnsers submitted a table of the selected referrals and a document of the referrals that can be downloaded or emailed to you 
+
+# Table of questions and awnsers with implemented if statment if None of the above is selected for either category or location
+
 event: ALRMdisplay_final_screen
 question: Here is a list of your services
 subquestion: |
-  
+
   The survey has now been completed!
   
   Please see below for a summary of your awnsers and make sure all the information is correct
-  
+
   Question|Answer
   ---|---
   Client intials|${ALRMinitals}
   Age|${ALRMage}
   Gender|${ALRMgender}
+  % if ALRMkeyterm.all_false() or ALRMlocation.all_false():
+  You have not selected either a category or location and thus cannot continue, Please press back to change your picks or press exit to be directed to the ALRM website.
+  %else:
   Category|${ALRMkeyterm.true_values()}
   Locations Selected|${ALRMlocation.true_values()}
   
-  
-  Please see below for teh list of services tht are relvevant for ${ALRMinitals} considering the information you have entered today. 
+  Please see below for the list of services tht are relvevant for ${ALRMinitals} considering the information you have entered today. 
   
   You can also download a copy or email below. 
   
   *Disclaimer:* Please note that CSP Connect is not responsible for keeping the referral system up to date. Some services we refer may have chnaged location or be closed.
   
-  
-  ${ALRMselected_services_table}
 
- 
+  ${ALRMselected_services_table}
+  %endif
+  
+# A document is attached that uses Jinja2, including the choices that have been made and a for loop to implement and an appenended list of services 
 attachment:
   docx template file: ALRM_referral.docx
   valid formats:
@@ -74,6 +88,7 @@ buttons:
   - Exit: exit
     url: https://alrm.org.au/
 ---
+# This is how the table is set up, the data is taken from the iteration below. More coloumns can be added if they match up with the dictionary terms
 table: ALRMselected_services_table
 rows: ALRMselected_services
 columns:
@@ -95,10 +110,14 @@ columns:
       row_item['gender']
 
 ---
+# Iteration to appened the referral list
 code: |
+
+  # A for loop to loop through the service dictionary 
   ALRMselected_services = []
   for ALRMa_service in ALRMservices:
-    # Criteria tests
+  
+    # Criteria tests: Nested if statment for all the tests based on the questions asked
     if ALRMa_service['min_age'] <= ALRMage <= ALRMa_service['max_age']:
       ALRMage_ok = True
     else:
@@ -122,7 +141,10 @@ code: |
       if ALRMa_location in ALRMa_service['location']:
         ALRMlocation_ok = True
       
-    # Eligibility test
+    # Eligibility test 
+    # If all of the above tests = True then the list will be appended otherwise the table will not show and the following string will be implemented instead.
     if ALRMage_ok and ALRMgender_ok and ALRMkeyterm_ok and ALRMlocation_ok:
       ALRMselected_services.append(ALRMa_service)
+    else:
+      ALRMselected_services_table = 'There are no places within the parameters'
 ---
