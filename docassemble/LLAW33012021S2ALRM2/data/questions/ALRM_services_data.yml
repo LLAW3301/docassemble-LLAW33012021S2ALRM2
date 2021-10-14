@@ -1,4 +1,15 @@
 ---
+# list of services in dictionary form that can be appeneded 
+# to add another service easily fill out the blank template below and add under data  #  - organisation:                                                                      #  - service:
+#  - min_age:
+#  - max_age:
+#  - gender:
+#  - location:
+#  - keyterm:
+#  - website:
+#  - phone:
+#  - email:
+#  - address:
 # double check theese services and add in age range chnage back location to there actual location stored in address
 variable name: ALRMservices
 use objects: True
@@ -34,6 +45,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: riverland
     keyterm: substance
     website: https://asg.org.au/northern-metro-riverland-outreach/
@@ -48,6 +60,7 @@ data:
     gender:
       - M
       - F
+      - P
     location: riverland
     keyterm: substance
     website: https://asg.org.au/northern-metro-riverland-outreach/
@@ -62,6 +75,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: metro
     keyterm: substance
     website: https://asg.org.au/mobile-assistance-patrol-map/
@@ -76,6 +90,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: homeless
     website: https://asg.org.au/homelessness/
@@ -90,6 +105,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
@@ -104,6 +120,7 @@ data:
     gender:
       - M
       - F
+      - P
     location: gambier
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
@@ -118,6 +135,7 @@ data:
     gender:
       - M
       - F
+      - P
     location: riverland
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
@@ -132,6 +150,7 @@ data:
     gender:
       - M
       - F
+      - P
     location: murray
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
@@ -146,6 +165,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: gambier
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -160,6 +180,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: APY
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -175,6 +196,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -189,6 +211,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -203,6 +226,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -217,6 +241,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -231,6 +256,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -245,6 +271,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -259,6 +286,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: south
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -273,6 +301,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: south
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -287,6 +316,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: south
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -301,6 +331,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -315,6 +346,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -329,6 +361,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -343,6 +376,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -357,6 +391,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -371,6 +406,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: riverland
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -385,6 +421,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: riverland
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -399,6 +436,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: riverland
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
@@ -413,6 +451,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -434,6 +473,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -455,6 +495,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -476,6 +517,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -497,6 +539,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -518,6 +561,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -539,6 +583,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -560,6 +605,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: 
       - adelaide
       - port
@@ -581,6 +627,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -595,6 +642,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -609,6 +657,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: disintellect
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -623,6 +672,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -637,6 +687,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -651,6 +702,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -665,6 +717,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: disintellect
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -679,6 +732,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adeaide
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -693,6 +747,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -707,6 +762,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -721,6 +777,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: disintellect
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -735,6 +792,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -749,6 +807,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -763,6 +822,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -777,6 +837,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: disintellectual
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -791,6 +852,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
@@ -805,6 +867,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adeaide
     keyterm: mental
     website: https://ucwb.org.au/
@@ -819,6 +882,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: finance
     website: https://ucwb.org.au/
@@ -833,6 +897,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: homeless
     website: https://ucwb.org.au/
@@ -847,6 +912,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: disintellect
     website: https://ucwb.org.au/
@@ -861,6 +927,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: disphysical
     website: https://ucwb.org.au/
@@ -875,6 +942,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: murray
     keyterm: finance
     website: https://www.lccare.org.au/find-help/personal-counselling/
@@ -889,6 +957,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: finance
     website: https://www.lccare.org.au/find-help/personal-counselling/
@@ -903,6 +972,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: south
     keyterm: homeless
     website: https://www.lccare.org.au/find-help/personal-counselling/
@@ -917,6 +987,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: mental
     website: https://www.lccare.org.au/find-help/personal-counselling/
@@ -931,6 +1002,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: east
     keyterm: violence
     website: https://www.lccare.org.au/find-help/personal-counselling/
@@ -945,6 +1017,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: medical
     website: https://www.lccare.org.au/find-help/clinical-supervision/
@@ -959,6 +1032,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: mental 
     website: https://www.lccare.org.au/find-help/clinical-supervision/
@@ -973,6 +1047,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: finance
     website: https://www.lccare.org.au/find-help/financial-hurdles/emergency-relief/
@@ -987,6 +1062,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: north
     keyterm: finance
     website: https://www.lccare.org.au/find-help/financial-hurdles/emergency-relief/
@@ -1001,6 +1077,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: finance
     website: https://www.salvationarmy.org.au/adelaidecity/what-we-do/community-care/
@@ -1015,6 +1092,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: adelaide
     keyterm: mental
     website: https://www.salvationarmy.org.au/adelaidecity/what-we-do/community-care/
