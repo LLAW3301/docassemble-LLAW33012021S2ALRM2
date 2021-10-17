@@ -3,7 +3,7 @@
 
 question: Please add a way to identify the client?
 subquestion: | 
-  Please add here the clinets intials or a way to indetify them without using their name so you can keep track of what services have been reffered for which client.
+  Please add the clients intials or a way to identify them without using their full name. This is to allow ALRM to keep track of which services have been utilised for specified referral with each respective client.
 fields:
   - no label: ALRMinitals
 ---
@@ -54,7 +54,7 @@ fields:
 # help que added to pop up on the side in order to indetify what suburbs are included, the list however is not exaustive. An interative map would be more helpful
 question: Location
 subquestion: |
-  Please select the location or locations in which you are looking
+  Please select the location/s in which you are looking
   for services.
   
   You may select more than one location
