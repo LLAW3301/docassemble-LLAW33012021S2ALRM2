@@ -24,7 +24,8 @@ event: ALRMwelcome_screen
 question: Welcome
 subquestion: |
 
-  # **Welcome to CSP Connect!**
+
+  **Welcome to CSP Connect!**
   
   This application has been developed for the Aboriginal Legal Rights Movement (ALRM) and their legal team to assist connecting their clients with specified referral services within the criminal sector.
   
@@ -56,6 +57,7 @@ event: ALRMdisplay_final_screen
 question: Here is a list of your services
 subquestion: |
 
+
   # Thankyou for completing the CSP Connect Client Survey!
   
   **Please see below for a summary of your entered answers and ensure all the information is correct**
@@ -71,6 +73,7 @@ subquestion: |
   Category|${ALRMkeyterm.true_values()}
   Locations Selected|${ALRMlocation.true_values()}
   
+
   **Please see below for a list of relvevant specified services curated for ${ALRMinitals} with reference to the information you have provided today.** 
   
   You have the ability to download or email a copy of this list below. 
