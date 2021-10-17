@@ -1,4 +1,9 @@
-question: What is the clients initals?
+# This .yml file contains all the questions to run the app
+# Initals are being used to identify the client for administrative reasons without comprimising privacy
+
+question: Please add a way to identify the client?
+subquestion: | 
+  Please add here the clinets intials or a way to indetify them without using their name so you can keep track of what services have been reffered for which client.
 fields:
   - no label: ALRMinitals
 ---
@@ -13,8 +18,10 @@ fields:
     datatype: radio
     choices:
       - Male: M
-      - Female: F   
+      - Female: F 
+      - Prefer not to specify: P
 ---
+# icons added to clarify choices and for engagment purposes
 question: Category
 subquestion: |
   Please select the categories which best describes the clients issue/s
@@ -25,17 +32,26 @@ fields:
   - no label: ALRMkeyterm
     datatype: checkboxes
     choices:
-      - Family violence: violence
-      - Mental Health: mental
-      - Drug or alcohol abuse: substance
-      - Homelessness: homeless
-      - Need of an address for bail: bail
-      - Finacial: finace
-      - Disability (Intellectual): disintellect
-      - Disability (Physical): disphysical
-      - Medical Health: medical 
+      - "Family violence": violence
+        image: map
+      - "Mental Health": mental
+        image: map 
+      - "Drug or alcohol abuse": substance
+        image: map 
+      - "Homelessness": homeless
+        image: map 
+      - "Need of an address for bail": bail
+        image: map 
+      - "Finacial": finace
+        image: map 
+      - "Disability (Intellectual)": disintellect
+        image: map 
+      - "Disability (Physical)": disphysical
+        image: map 
+      - "Medical Health": medical 
+        image: map 
 ---
-
+# help que added to pop up on the side in order to indetify what suburbs are included, the list however is not exaustive. An interative map would be more helpful
 question: Location
 subquestion: |
   Please select the location or locations in which you are looking
@@ -48,16 +64,18 @@ fields:
   - no label: ALRMlocation
     datatype: checkboxes
     choices:
-      - Metropolitan Adelaide (within a 20km radius): metro
+      - City suburbs: metro
         help: | 
+          - Adelaide
           - Prospect 
-          - Walkerville 
-          - Norwood 
+          - Hindmarsh
+          - Croyden
+          - Bowden
           - Burnside
-      - Port Augusta or Ceduna: APY
+      - Port Augusta, Whyalla or Ceduna: APY
         help: | 
           - Located on the west coast of the gulf of the Eyre Peninsula 
-      - Port Adelaide: port
+      - Port Adelaide region: port
         help: | 
           - North Western Suburbs of Adelaide 
           - Alberton 
@@ -66,5 +84,32 @@ fields:
           - Queenstown 
           - Semaphore South
           - Port Adelaide
-          - Gillman        
+          - Gillman 
+      - Southern Suburbs: south
+        help: | 
+          - Marion
+          - Morphett vale
+          - Seaford
+          - Noarlunga
+          - Aldinga
+      - Northern suburbs: north
+        help: | 
+          - Elizabeth
+          - Sailsbury 
+          - Muno Para
+      - Eastern suburbs: east
+        help: | 
+          - Klemzig
+          - Gillis planes
+          - Ingle farm
+          - Modbury
+      - Mt Gambier region: gambier
+        help: | 
+          - Naracoorte 
+          - Robe
+          - Millicent
+      - Riverland: riverland
+        help: | 
+          - Renmark
+          - Berri
 ---

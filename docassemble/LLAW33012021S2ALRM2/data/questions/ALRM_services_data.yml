@@ -1,26 +1,37 @@
 ---
+# list of services in dictionary form that can be appeneded 
+# to add another service easily fill out the blank template below and add under data  #  - organisation:                                                                      #  - service:
+#  - min_age:
+#  - max_age:
+#  - gender:
+#  - location:
+#  - keyterm:
+#  - website:
+#  - phone:
+#  - email:
+#  - address:
 # double check theese services and add in age range chnage back location to there actual location stored in address
 variable name: ALRMservices
 use objects: True
 data:
   - organisation: Aboriginal Sobriety Group
     service: Lakalinjeri Tumbetin Waal (24/7 Live-In Rehabilitation Service)
-    min_age: 2
-    max_age: 100
+    min_age: 12
+    max_age: 65
     gender: M
-    location: metro
+    location: adelaide
     keyterm: substance
     website: https://asg.org.au/stabilisation-rehabilitation/
     phone: (08) 8223 4204
     email: referrals@asg.org.au
-    address: NA
+    address: Unit 182/190 Wakefield St, Adelaide SA 5000
     ###
   - organisation: Aboriginal Sobriety Group
     service: Leila Rankine (24/7 Live-In Rehabilitation Service)
-    min_age: 2
-    max_age: 100
+    min_age: 12
+    max_age: 65
     gender: F 
-    location: metro
+    location: murray
     keyterm: substance
     website: https://asg.org.au/stabilisation-rehabilitation/
     phone: (08) 8223 4204
@@ -29,12 +40,13 @@ data:
     ###
   - organisation: Aboriginal Sobriety Group
     service: Substance Misuse And Social Emotional Wellbeing Services
-    min_age: 2
-    max_age: 100
+    min_age: 12
+    max_age: 65
     gender: 
       - M
       - F
-    location: APY
+      - P
+    location: riverland
     keyterm: substance
     website: https://asg.org.au/northern-metro-riverland-outreach/
     phone: (08) 8580 8700
@@ -43,12 +55,13 @@ data:
     ###
   - organisation: Aboriginal Sobriety Group
     service: Drug & Alcohol, Welfare & Justice System Support (Aboriginal Prisoners)
-    min_age: 2
-    max_age: 100
+    min_age: 12
+    max_age: 65
     gender:
       - M
       - F
-    location: APY
+      - P
+    location: riverland
     keyterm: substance
     website: https://asg.org.au/northern-metro-riverland-outreach/
     phone: (08) 8580 8700
@@ -62,6 +75,7 @@ data:
     gender: 
       - M
       - F
+      - P
     location: metro
     keyterm: substance
     website: https://asg.org.au/mobile-assistance-patrol-map/
@@ -76,12 +90,13 @@ data:
     gender: 
       - M
       - F
+      - P
     location: port
     keyterm: homeless
     website: https://asg.org.au/homelessness/
     phone: (08) 8243 1698
     email: reception@asg.org.au
-    address: Western suburbs
+    address: 124 Lipson St, Port Adelaide SA 5015
     ###
   - organisation: Aboriginal Community Connect
     service: Community Residential Rehabilitation Program Service
@@ -90,7 +105,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
     phone: (08) 8202 5660
@@ -104,7 +120,8 @@ data:
     gender:
       - M
       - F
-    location: APY
+      - P
+    location: gambier
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
     phone: (08) 8202 5672
@@ -118,7 +135,8 @@ data:
     gender:
       - M
       - F
-    location: APY
+      - P
+    location: riverland
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
     phone: (08) 8568 6362
@@ -132,13 +150,14 @@ data:
     gender:
       - M
       - F
-    location: APY
+      - P
+    location: murray
     keyterm: substance
     website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
     phone: 0428 956 943
     email: NA
     address: 35 Bridge St, Murray Bridge SA 5253 (MADEC Australia)
-    ###
+     ###
   - organisation: Relationships Australia
     service: Children & Parenting Support, Family Support Services
     min_age: 2
@@ -146,41 +165,14 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: gambier
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8223 4566
     email: NA
-    address: NA
-    ###
-  - organisation: Relationships Australia
-    service: Family Mental Health Support, Counselling Services
-    min_age: 2
-    max_age: 100
-    gender: 
-      - M
-      - F
-    location: metro
-    keyterm: mental
-    website: https://www.rasa.org.au/services/post-separation/support-services/
-    phone: (08) 8223 4566
-    email: NA
-    address: NA
-    ###
-  - organisation: Relationships Australia
-    service: Gambling Support
-    min_age: 2
-    max_age: 100
-    gender: 
-      - M
-      - F
-    location: metro
-    keyterm: finance
-    website: https://www.rasa.org.au/services/post-separation/support-services/
-    phone: (08) 8223 4566
-    email: NA
-    address: NA
-    ###
+    address: 10 Eleanor Street, Mount Gambier SA 5290
+  ###
   - organisation: Relationships Australia
     service: Children & Parenting Support, Family Support Services
     min_age: 2
@@ -188,7 +180,24 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: APY
+    keyterm: violence
+    website: https://www.rasa.org.au/services/post-separation/support-services/
+    phone: (08) 8223 4566
+    email: NA
+    address: 54 Commercial Road, Port Augusta SA 5700
+    ###
+
+  - organisation: Relationships Australia
+    service: Children & Parenting Support, Family Support Services
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: adelaide
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8245 8100
@@ -202,7 +211,8 @@ data:
     gender: 
       - M
       - F
-    location: metros
+      - P
+    location: adelaide
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8245 8100
@@ -216,7 +226,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8245 8100
@@ -230,7 +241,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: port
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8245 8100
@@ -244,7 +256,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: port
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8245 8100
@@ -258,7 +271,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: port
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8245 8100
@@ -272,7 +286,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: south
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8377 5400
@@ -286,7 +301,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: south
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8377 5400
@@ -300,7 +316,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: south
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8255 3323
@@ -314,7 +331,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8255 3323
@@ -328,7 +346,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8255 3323
@@ -342,7 +361,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8250 6600
@@ -356,7 +376,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8250 6600
@@ -370,7 +391,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8250 6600
@@ -384,7 +406,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: riverland
     keyterm: violence
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8582 4122
@@ -398,7 +421,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: riverland
     keyterm: mental
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8582 4122
@@ -412,7 +436,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: riverland
     keyterm: finance
     website: https://www.rasa.org.au/services/post-separation/support-services/
     phone: (08) 8582 4122
@@ -426,7 +451,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: homeless
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -440,7 +473,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: disintellect
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -454,7 +495,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: disphysical
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -468,7 +517,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: violence
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -482,7 +539,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: homeless
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -496,7 +561,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: disintellect
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -510,7 +583,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: disphysical
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -524,7 +605,15 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: 
+      - adelaide
+      - port
+      - north
+      - south 
+      - east
+      - gambier
+      - APY
     keyterm: violence
     website: https://www.centacare.org.au/services/ , https://www.centacare.org.au/where-we-are/
     phone: (08) 8215 6700
@@ -538,7 +627,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8182 9206
@@ -552,7 +642,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8182 9206
@@ -566,7 +657,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: disintellect
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8182 9206
@@ -580,7 +672,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8182 9206
@@ -594,7 +687,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8342 2250
@@ -608,7 +702,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8342 2250
@@ -622,7 +717,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: disintellect
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8342 2250
@@ -636,7 +732,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adeaide
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8342 2250
@@ -650,7 +747,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 7425 8900
@@ -664,7 +762,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 7425 8900
@@ -678,7 +777,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: disintellect
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 7425 8900
@@ -692,7 +792,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 7425 8900
@@ -706,7 +807,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: port
     keyterm: medical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8240 9611
@@ -720,7 +822,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: port
     keyterm: mental
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8240 9611
@@ -734,7 +837,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: port
     keyterm: disintellectual
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8240 9611
@@ -748,7 +852,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: port
     keyterm: disphysical
     website: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/health+services+for/aboriginal+health+services/watto+purrunna+aboriginal+primary+health+care+service
     phone: (08) 8240 9611
@@ -762,7 +867,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adeaide
     keyterm: mental
     website: https://ucwb.org.au/
     phone: (08) 8245 7100
@@ -776,7 +882,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: finance
     website: https://ucwb.org.au/
     phone: (08) 8245 7100
@@ -790,7 +897,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: homeless
     website: https://ucwb.org.au/
     phone: (08) 8245 7100
@@ -804,7 +912,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: disintellect
     website: https://ucwb.org.au/
     phone: (08) 8245 7100
@@ -818,7 +927,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: disphysical
     website: https://ucwb.org.au/
     phone: (08) 8245 7100
@@ -826,46 +936,64 @@ data:
     address: 77 Gibson St, Bowden SA 5007
     ###
   - organisation: Lutheran Community Care
-    service: Counselling
+    service: Finicaial counselling
     min_age: 2
     max_age: 100
     gender: 
       - M
       - F
-    location: metro
-    keyterm: mental
+      - P
+    location: murray
+    keyterm: finance
+    website: https://www.lccare.org.au/find-help/personal-counselling/
+    phone: 0490 660 158
+    email: murraylands@lccare.org.au
+    address: Corner of Florence and Charles Streets Murray Bridge SA 5253
+    ###
+  - organisation: Lutheran Community Care
+    service: Finacial counselling
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: north
+    keyterm: finance
     website: https://www.lccare.org.au/find-help/personal-counselling/
     phone: (08) 8269 9300
     email: NA
-    address: NA
+    address: 112 Coventry Road Smithfield Plains SA 5114
     ###
   - organisation: Lutheran Community Care
-    service: Family Counselling
+    service: Outer Southern Generic Homelessness Service
     min_age: 2
     max_age: 100
     gender: 
       - M
       - F
-    location: metro
-    keyterm: violence
+      - P
+    location: south
+    keyterm: homeless
     website: https://www.lccare.org.au/find-help/personal-counselling/
-    phone: (08) 8269 9300
-    email: NA
+    phone: (08) 8326 4688
+    email: osghs_admin@lccare.org.au
     address: NA
     ###
   - organisation: Lutheran Community Care
-    service: Counselling
+    service: Finicial Counselling
     min_age: 2
     max_age: 100
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: mental
     website: https://www.lccare.org.au/find-help/personal-counselling/
-    phone: 0490 660 158
-    email: NA
-    address: NA
+    phone: (08) 8349 6099
+    email: inglefarm@lccare.org.au
+    address: 2 Belalie Road Ingle Farm SA 5098
     ###
   - organisation: Lutheran Community Care
     service: Family Counselling
@@ -874,68 +1002,13 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: east
     keyterm: violence
     website: https://www.lccare.org.au/find-help/personal-counselling/
-    phone: 0490 660 158
-    email: NA
-    address: NA
-    ###
-  - organisation: Lutheran Community Care
-    service: Counselling
-    min_age: 2
-    max_age: 100
-    gender: 
-      - M
-      - F
-    location: metro
-    keyterm: mental
-    website: https://www.lccare.org.au/find-help/personal-counselling/
-    phone: (08) 8562 2688
-    email: NA
-    address: NA
-    ###
-  - organisation: Lutheran Community Care
-    service: Family Counselling
-    min_age: 2
-    max_age: 100
-    gender: 
-      - M
-      - F
-    location: metro
-    keyterm: violence
-    website: https://www.lccare.org.au/find-help/personal-counselling/
-    phone: (08) 8562 2688
-    email: NA
-    address: NA
-    ###
-  - organisation: Lutheran Community Care
-    service: Foster Care Service
-    min_age: 2
-    max_age: 100
-    gender: 
-      - M
-      - F
-    location: metro
-    keyterm: violence
-    website: https://www.lccare.org.au/foster-care/
-    phone: (08) 8337 8787
-    email: fostercare@lccare.org.au
-    address: NA
-    ###
-  - organisation: Lutheran Community Care
-    service: Foster Care Service
-    min_age: 2
-    max_age: 100
-    gender: 
-      - M
-      - F
-    location: metro
-    keyterm: violence
-    website: https://www.lccare.org.au/foster-care/
-    phone: (08) 8337 8787
-    email: fostercare@lccare.org.au
-    address: NA
+    phone: (08) 8349 6099
+    email: inglefarm@lccare.org.au
+    address: 2 Belalie Road Ingle Farm SA 5098
     ###
   - organisation: Lutheran Community Care
     service: Clinical Supervision Service
@@ -944,7 +1017,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: medical
     website: https://www.lccare.org.au/find-help/clinical-supervision/
     phone: (08) 8269 9300
@@ -958,7 +1032,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: mental 
     website: https://www.lccare.org.au/find-help/clinical-supervision/
     phone: (08) 8269 9300
@@ -972,7 +1047,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: finance
     website: https://www.lccare.org.au/find-help/financial-hurdles/emergency-relief/
     phone: (08) 8269 9300
@@ -986,7 +1062,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: north
     keyterm: finance
     website: https://www.lccare.org.au/find-help/financial-hurdles/emergency-relief/
     phone: (08) 8562 2688
@@ -1000,7 +1077,8 @@ data:
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: finance
     website: https://www.salvationarmy.org.au/adelaidecity/what-we-do/community-care/
     phone: (08) 8227 0199
@@ -1008,17 +1086,267 @@ data:
     address: 277 Pirie St, Adelaide SA 5000
     ###
   - organisation: Salvation Army
-    service: General Counselling
+    service: 
     min_age: 2
     max_age: 100
     gender: 
       - M
       - F
-    location: metro
+      - P
+    location: adelaide
     keyterm: mental
     website: https://www.salvationarmy.org.au/adelaidecity/what-we-do/community-care/
     phone: (08) 8227 0199
     email: adminach@salvationarmy.org.au
     address: 277 Pirie St, Adelaide SA 5000
     ###
----
+  - organisation: Aboriginal Family Support Services
+    service: Accommodation, Parenting Skills, Financial and General Counselling, Employment
+    min_age: 15
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: metro
+    keyterm: violence homeless 
+    website: https://www.afss.com.au/youth-accommodation
+    phone: (08) 8205 1500
+    email: afss@afss.com.au
+    address: 134 Waymouth St, Adelaide SA
+    ###
+  - organisation: Aboriginal Sobriety Group
+    service: Accommodation, Counselling, Rehabilitation Facilities
+    min_age: 15
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: metro riverland 
+    keyterm: substance homeless 
+    website: http://asg.org.au/northern-metro-riverland-outreach/
+    phone: (08) 8223 4204
+    email: reception@asg.org.au  
+    address: 182-190 Wakefield Street, Adelaide 
+    ###
+  - organisation: Aged Homeless Assistance Program
+    service: Accommodation
+    min_age: 50
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: metro
+    keyterm: homeless 
+    website: https://www.housing.sa.gov.au/about-us/our-partnerships/homelessness-service-providers/aged-homelessness-assistance-program 
+    phone: 131 299
+    email: housingcustomers@sa.gov.au  
+    address: Riverside Centre, North Terrace Adelaide, SA 
+    ###
+  - organisation: Anglican Community Care Inc
+    service: Accommodation
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: gambier riverland
+    keyterm: homeless 
+    website: NA 
+    phone: (08) 8724 5400
+    email: care@accare.org.au  
+    address: 70 – 72 White Avenue, Mount Gambier SA 5290 
+    ###
+  - organisation: Baptist Care
+    service: Accommodation, Counselling
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: metro east
+    keyterm: homeless 
+    website: https://baptistcaresa.org.au/service/aboriginal-services  
+    phone: (08) 8118 5200
+    email: enquiries@baptistcaresa.org.au  
+    address: 11-19 Millers Court, Adelaide 
+    ###
+  - organisation: Bramwell House
+    service: Accommodation 
+    min_age: 2
+    max_age: 100
+    gender: 
+      - F
+      - P
+    location: metro
+    keyterm: violence 
+    website: https://www.salvationarmy.org.au/locations/south-australia/bramwell-house-south-australia/ 
+    phone: 13 72 58
+    email: NA  
+    address: NA
+    ###
+  - organisation: Carrington Cottages
+    service: Accommodation
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+    location: metro
+    keyterm: homeless 
+    website: NA  
+    phone: (08) 8232 2664 
+    email: admin@carringtoncottages.org.au  
+    address: 154/160 Carrington St, Adelaide, SA 
+    ###
+  - organisation: Common Ground
+    service: Accommodation
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: metro APY
+    keyterm: homeless 
+    website: https://www.housingchoices.org.au/residents/south-australia/common-ground 
+    phone: 1300 312 447 or 08 8641 1651 
+    email: infosa@hcau.org.au or cgpa@aus.salvationarmy.org  
+    address: 11-19 Millers Court, Adelaide 
+    ###
+  - organisation: Intergrated Housing Exists Program
+    service: Accommodation 
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: metro
+    keyterm: homeless 
+    website: NA
+    phone: 131 299 
+    email: housingcustomers@sa.gov.au  
+    address: Riverside Centre, North Terrace Adelaide, SA
+    ###
+  - organisation: Life Without Barriers 
+    service: Accommodation 
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: riverland
+    keyterm: homeless
+    website: https://www.lwb.org.au/services/homelessness-support-services/
+    phone: (08) 8580 5500   
+    email: NA  
+    address: 12 Crawford Terrace, Berri, SA, 5343
+    ###
+  - organisation: Uniting Communities 
+    service: Accommodation, Counselling, Rehabilitation Facilities   
+    min_age: 15
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: metro
+    keyterm: homeless
+    website: https://www.unitingcommunities.org/service/community-support/aboriginal-services 
+    phone: (08) 8202 5610   
+    email: markh@unitingcommunities.org or enquiries@unitingcommunities.org 
+    address: Kurlana Tampawardli, 45-47 Tapleys Hill Road, Hendon  
+    ###
+  - organisation: Service to Youth Council 
+    service: Accomodation 
+    min_age: 15
+    max_age: 25
+    gender: 
+      - M
+      - F
+      - P
+    location: metro east
+    keyterm: homeless
+    website: https://www.syc.net.au/about-us/contact-us/
+    phone: NA   
+    email: hypahousing.referrals@hypa.net.au 
+    address: NA 
+    ###
+  - organisation: Staying Home Staying Safe
+    service: Accomodation 
+    min_age: 2
+    max_age: 100
+    gender: 
+      - F
+      - P
+    location: metro 
+    keyterm: homeless violence
+    website: https://www.victimsa.org/get-help/staying-home-staying-safe  
+    phone: 1800 842 846    
+    email: shss@victimsa.org
+    address: 33 Franklin Street, Adelaide SA 5001
+    ###
+  - organisation: Tika Tirka 
+    service: Accomodation 
+    min_age: 18
+    max_age: 26
+    gender: 
+      - M
+      - F
+      - P
+    location: metro 
+    keyterm: homeless
+    website: NA
+    phone: 8470 9491   
+    email: tikatirka@sa.gov.au 
+    address: Riverside Centre, North Terrace Adelaide, SA  
+    ###
+  - organisation: Vinnies Mens Crisis Centre 
+    service: Accomodation 
+    min_age: 18
+    max_age: 100
+    gender: 
+      - M
+    location: metro 
+    keyterm: homeless
+    website: https://www.vinnies.org.au/page/ Find_Help/SA/Housing/Vincentian_Centre/ 
+    phone: 8231 2250    
+    email: svdp@svdpsa.org.au 
+    address: 22 Whitmore Square, Adelaide SA 
+    ###
+  - organisation: West Coast Youth and Community Support Service  
+    service: Accomodation 
+    min_age: 2
+    max_age: 100
+    gender: 
+      - M
+      - F
+      - P
+    location: port 
+    keyterm: homeless
+    website: https://www.wcycs.com.au/about-us/what-we-do/
+    phone: 8683 0072    
+    email: wcycs@wcycs.com.au  
+    address: 1/7 Mortlock Terrace, Port Lincoln SA 5606
+    ###
+ ###
+  - organisation: Yarredi Services Inc
+    service: Accomodation 
+    min_age: 2
+    max_age: 100
+    gender: 
+      - F
+      - P
+    location: port 
+    keyterm: homeless violence 
+    website: under redevelopment
+    phone: 8683 0311     
+    email: enquiry@yarredi.org.au    
+    address: 13 Dutton St Port Lincoln, SA 5606
+    ###
+--- 

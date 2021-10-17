@@ -1,52 +1,94 @@
----
+--- 
+# Theese are added to this .yml file that runs the app to simplify reading
 include:
   - ALRM_questions.yml
-  - ALRM_iteration.yml
   - ALRM_services_data.yml
 ---
-objects:
-  - ALRMselected_services: DAList.using(there_are_any=True, auto_gather=False)
+# Not sure if this is needed, Still needs work 
+images:
+  Calendar: calendar.png
 ---
+# Code used to process the order of the screens, needed to force ask first screen
 mandatory: True
 code: |
   ALRMdisplay_welcome_screen
   
   ALRMdisplay_final_screen
-  
 ---
 code: |
   ALRMdisplay_welcome_screen = True
   force_ask('ALRMwelcome_screen')
 ---
 event: ALRMwelcome_screen
+# Expalin what the App does and how to complete
 question: Welcome
 subquestion: |
-    Welcome to the Criminal Service Providers ('CPS') Connect Application.
+
+  Welcome to CSP Connect!
+  
+  This App has been developed for the Aboriginal Legal Rights Movement (ALRM) and their legal team who need assistance connecting their clients to services which help them get back on track after legal assistance.
+  
+  
+  Theese services may include drug and alcohol support, homelessness, mental health, housing, health and food.
+  
+  
+  CSP Connect finds and narrows down service providers for the specific client, based on the information the lawyer enters in the App. Therefore, the support services referred to clients are personally taregted. This means that ALRM will see a greater number of clients being able to move on and re-establish themseleves in their communities whilst staying out of the legal system. 
+  
+  If your client wishes to be referred to personalised servie providers, please click 'continue' and follow the onscreen instructions.
+  
+  If you do not wish to participate, please click on the 'exit' button which will take you to the ALRM website.
+  
 buttons:
   - I want to continue: continue
   - I do not want to continue: exit
+    url: https://alrm.org.au/
 ---
+# Display a summary of the awnsers submitted a table of the selected referrals and a document of the referrals that can be downloaded or emailed to you 
+
+# Table of questions and awnsers with implemented if statment if None of the above is selected for either category or location
+
 event: ALRMdisplay_final_screen
 question: Here is a list of your services
 subquestion: |
-  Thankyou for completing the CSP connect survey.
+
+  The survey has now been completed!
   
+  Please see below for a summary of your awnsers and make sure all the information is correct
+
   Question|Answer
   ---|---
   Client intials|${ALRMinitals}
   Age|${ALRMage}
   Gender|${ALRMgender}
+  % if ALRMkeyterm.all_false() or ALRMlocation.all_false():
+  You have not selected either a category or location and thus cannot continue, Please press back to change your picks or press exit to be directed to the ALRM website.
+  %else:
   Category|${ALRMkeyterm.true_values()}
   Locations Selected|${ALRMlocation.true_values()}
-   
-  The referal for ${ALRMinitals} 
-  ${ALRMselected_services_table}
   
+  Please see below for the list of services tht are relvevant for ${ALRMinitals} considering the information you have entered today. 
+  
+  You can also download a copy or email below. 
+  
+  *Disclaimer:* Please note that CSP Connect is not responsible for keeping the referral system up to date. Some services we refer may have chnaged location or be closed.
+  
+
+  ${ALRMselected_services_table}
+  %endif
+  
+# A document is attached that uses Jinja2, including the choices that have been made and a for loop to implement and an appenended list of services 
+attachment:
+  docx template file: ALRM_referral.docx
+  valid formats:
+  - pdf
+  - docx
   
 buttons:
   - Restart: restart
   - Exit: exit
+    url: https://alrm.org.au/
 ---
+# This is how the table is set up, the data is taken from the iteration below. More coloumns can be added if they match up with the dictionary terms
 table: ALRMselected_services_table
 rows: ALRMselected_services
 columns:
@@ -66,7 +108,43 @@ columns:
       'From {} to {}'.format(row_item['min_age'], row_item['max_age'])
   - Gender: |
       row_item['gender']
-  - Keyterm: |
-      row_item['keyterm']
 
+---
+# Iteration to appened the referral list
+code: |
+
+  # A for loop to loop through the service dictionary 
+  ALRMselected_services = []
+  for ALRMa_service in ALRMservices:
+  
+    # Criteria tests: Nested if statment for all the tests based on the questions asked
+    if ALRMa_service['min_age'] <= ALRMage <= ALRMa_service['max_age']:
+      ALRMage_ok = True
+    else:
+      ALRMage_ok = False
+      
+    # Gender
+    if ALRMgender in ALRMa_service['gender']:
+      ALRMgender_ok = True
+    else:
+      ALRMgender_ok = False
+     
+    # keyterm
+    ALRMkeyterm_ok = False
+    for ALRMa_keyterm in ALRMkeyterm.true_values():
+      if ALRMa_keyterm in ALRMa_service['keyterm']:
+        ALRMkeyterm_ok = True
+
+    # Location
+    ALRMlocation_ok = False
+    for ALRMa_location in ALRMlocation.true_values():
+      if ALRMa_location in ALRMa_service['location']:
+        ALRMlocation_ok = True
+      
+    # Eligibility test 
+    # If all of the above tests = True then the list will be appended otherwise the table will not show and the following string will be implemented instead.
+    if ALRMage_ok and ALRMgender_ok and ALRMkeyterm_ok and ALRMlocation_ok:
+      ALRMselected_services.append(ALRMa_service)
+    else:
+      ALRMselected_services_table = 'There are no places within the parameters'
 ---
