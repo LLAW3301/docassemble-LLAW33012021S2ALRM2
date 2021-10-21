@@ -1,9 +1,16 @@
 # This .yml file contains all the questions to run the app
+---
+# This is the cache for images used for the icons in keyword question
+images:
+  pic: calendar.png
+---
 # Initals are being used to identify the client for administrative reasons without comprimising privacy
 
 question: Please add a way to identify the client?
 subquestion: | 
-  Please add here the clinets intials or a way to indetify them without using their name so you can keep track of what services have been reffered for which client.
+
+  Please add the clients intials or a way to identify them without using their full name. This is to allow ALRM to keep track of which services have been utilised for specified referral with each respective client.
+
 fields:
   - no label: ALRMinitals
 ---
@@ -33,28 +40,28 @@ fields:
     datatype: checkboxes
     choices:
       - "Family violence": violence
-        image: map
+        image: pic
       - "Mental Health": mental
-        image: map 
+        image: pic
       - "Drug or alcohol abuse": substance
-        image: map 
+        image: pic
       - "Homelessness": homeless
-        image: map 
+        image: pic
       - "Need of an address for bail": bail
-        image: map 
+        image: pic
       - "Finacial": finace
-        image: map 
+        image: pic
       - "Disability (Intellectual)": disintellect
-        image: map 
+        image: pic
       - "Disability (Physical)": disphysical
-        image: map 
+        image: pic
       - "Medical Health": medical 
-        image: map 
+        image: pic
 ---
 # help que added to pop up on the side in order to indetify what suburbs are included, the list however is not exaustive. An interative map would be more helpful
 question: Location
 subquestion: |
-  Please select the location or locations in which you are looking
+  Please select the location/s in which you are looking
   for services.
   
   You may select more than one location

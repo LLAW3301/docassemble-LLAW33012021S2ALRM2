@@ -1,9 +1,8 @@
 # docassemble.hall0642
 
-A docassemble extension.
+A application made in by Flinders university for and in conjuction with teh Aboriginal Legal Rights Movement to refer services for their clients 
 
 ## Author
 
-Tahlia Hall, hall0642@flinders.edu.au
-Jade Edwards, edwa0545@flinders.edu.au
+Tahlia Hall, Jade Edwards, Emily Sills, Charlotte Kavanaugh 
 
