@@ -4,10 +4,6 @@ include:
   - ALRM_questions.yml
   - ALRM_services_data.yml
 ---
-# Not sure if this is needed, Still needs work 
-images:
-  Calendar: calendar.png
----
 # Code used to process the order of the screens, needed to force ask first screen
 mandatory: True
 code: |

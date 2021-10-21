@@ -1,4 +1,9 @@
 # This .yml file contains all the questions to run the app
+---
+# This is the cache for images used for the icons in keyword question
+images:
+  pic: calendar.png
+---
 # Initals are being used to identify the client for administrative reasons without comprimising privacy
 
 question: Please add a way to identify the client?
@@ -35,23 +40,23 @@ fields:
     datatype: checkboxes
     choices:
       - "Family violence": violence
-        image: map
+        image: pic
       - "Mental Health": mental
-        image: map 
+        image: pic
       - "Drug or alcohol abuse": substance
-        image: map 
+        image: pic
       - "Homelessness": homeless
-        image: map 
+        image: pic
       - "Need of an address for bail": bail
-        image: map 
+        image: pic
       - "Finacial": finace
-        image: map 
+        image: pic
       - "Disability (Intellectual)": disintellect
-        image: map 
+        image: pic
       - "Disability (Physical)": disphysical
-        image: map 
+        image: pic
       - "Medical Health": medical 
-        image: map 
+        image: pic
 ---
 # help que added to pop up on the side in order to indetify what suburbs are included, the list however is not exaustive. An interative map would be more helpful
 question: Location
