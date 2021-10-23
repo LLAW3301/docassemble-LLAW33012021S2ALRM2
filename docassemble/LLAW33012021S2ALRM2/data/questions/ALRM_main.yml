@@ -1,4 +1,4 @@
---- 
+---
 # Theese are added to this .yml file that runs the app to simplify reading
 include:
   - ALRM_questions.yml
@@ -11,6 +11,7 @@ code: |
   
   ALRMdisplay_final_screen
 ---
+# This forces the screento be displayed first 
 code: |
   ALRMdisplay_welcome_screen = True
   force_ask('ALRMwelcome_screen')
@@ -19,11 +20,10 @@ event: ALRMwelcome_screen
 # Expalin what the App does and how to complete
 question: Welcome
 subquestion: |
-
-
+  
   **Welcome to CSP Connect!**
   
-  This application has been developed for the Aboriginal Legal Rights Movement (ALRM) and their legal team to assist connecting their clients with specified referral services within the criminal sector.
+  This application has been developed for the Aboriginal Legal Rights Movement (ALRM)    and their legal team to assist connecting their clients with specified referral     services within the criminal sector.
   
   
   CSP Connect collates and funnels service providers for each specified client with reference to information entered into the application survey by its user.  
@@ -39,25 +39,24 @@ subquestion: |
   If your client is seeking referral to specialised service providers, please click 'continue' and follow the onscreen instructions.
   
   If you do not wish to participate, please click the 'exit' button which will refer you to the ALRM homepage.
- 
+
+  
 buttons:
   - I want to continue: continue
   - I do not want to continue: exit
     url: https://alrm.org.au/
 ---
+event: ALRMdisplay_final_screen
 # Display a summary of the awnsers submitted a table of the selected referrals and a document of the referrals that can be downloaded or emailed to you 
 
 # Table of questions and awnsers with implemented if statment if None of the above is selected for either category or location
-
-event: ALRMdisplay_final_screen
 question: Here is a list of your services
 subquestion: |
-
-
+  
   # Thankyou for completing the CSP Connect Client Survey!
   
   **Please see below for a summary of your entered answers and ensure all the information is correct**
-
+  
   Question|Answer
   ---|---
   Client intials|${ALRMinitals}
@@ -116,12 +115,9 @@ columns:
 ---
 # Iteration to appened the referral list
 code: |
-
-  # A for loop to loop through the service dictionary 
   ALRMselected_services = []
   for ALRMa_service in ALRMservices:
-  
-    # Criteria tests: Nested if statment for all the tests based on the questions asked
+    # Criteria tests
     if ALRMa_service['min_age'] <= ALRMage <= ALRMa_service['max_age']:
       ALRMage_ok = True
     else:
@@ -145,10 +141,8 @@ code: |
       if ALRMa_location in ALRMa_service['location']:
         ALRMlocation_ok = True
       
-    # Eligibility test 
-    # If all of the above tests = True then the list will be appended otherwise the table will not show and the following string will be implemented instead.
+    # Eligibility test
     if ALRMage_ok and ALRMgender_ok and ALRMkeyterm_ok and ALRMlocation_ok:
       ALRMselected_services.append(ALRMa_service)
-    else:
-      ALRMselected_services_table = 'There are no places within the parameters'
 ---
+
