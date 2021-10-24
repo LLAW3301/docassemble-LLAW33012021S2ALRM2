@@ -1,7 +1,8 @@
 ---
 # list of services in dictionary form that can be appeneded 
 # to add another service easily fill out the blank template below and add under data  
-#  - organisation:                                                                #  - service:
+#  - organisation:                                                                
+#  - service:
 #  - min_age:
 #  - max_age:
 #  - gender:
@@ -139,7 +140,7 @@ data:
       - Prefer not to specify
     location: Riverland
     keyterm: Drug or alcohol abuse
-    website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
+    website: https://www.unitingcommunities.org/service/aboriginal-services/
     phone: (08) 8568 6362
     email: NA
     address: 5 William Street, Berri SA 5343
@@ -154,7 +155,7 @@ data:
       - Prefer not to specify
     location: Murray Bridge
     keyterm: Drug or alcohol abuse
-    website: https://www.unitingcommunities.org/service/aboriginal-services/aboriginal-community-connect
+    website: https://www.unitingcommunities.org/service/aboriginal-services/
     phone: 0428 956 943
     email: NA
     address: 35 Bridge St, Murray Bridge SA 5253 (MADEC Australia)

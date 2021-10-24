@@ -1,8 +1,48 @@
 ---
+metadata:
+  title: |
+    CSP connect
+  description: |
+    An application that endevours to provide specific referals for ALRM's clients based on a short questionairre. 
+  authors:
+    - name: Tahlia Hall, Jade Edwards, Emily Sills and Charlotte Kavanaugh 
+      organization: Flinders university in conjuction with the Aboriginal Legal Rights Movement
+  revision_date: 24-10-2021
+---
+# Modify the post default screen part to attribute work to Flinders and the client
+default screen parts:
+  post: |
+    <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
+    <div style="margin: 5px"><img src="https://staff.flinders.edu.au/etc.clientlibs/flinders/clientlibs/clientlib-site/resources/images/flinderuni_main_logo_black.png" height="40">
+    </div>
+    <div style="margin: 5px; text-align: right">
+    <cite><small><i>
+    Developed by Flinders University in collaboration with ALRM
+    </i></small></cite>
+    </div>
+    </div>
+---
 # Theese are added to this .yml file that runs the app to simplify reading
 include:
   - ALRM_questions.yml
   - ALRM_services_data.yml
+---
+# CSS:Changes the sytle of the application and width of table
+# debug: Hides the source button 
+# hiding the standard menu as end users do not need to log in to the system to run your app
+features:
+  css: ALRM_1.css
+  debug: False
+  hide standard menu: True
+---
+# Imputs the logo
+objects:
+  - ALRMlogo: DAStaticFile.using(filename='ALRM_logo.png')
+---
+#dictates the size of the FLPN logo
+mandatory: true
+code: |
+  set_parts(logo='<img src="' + ALRMlogo.url_for() + '" style="height: 50px;">')
 ---
 # Code used to process the order of the screens, needed to force ask first screen
 mandatory: True
@@ -46,6 +86,7 @@ buttons:
   - I do not want to continue: exit
     url: https://alrm.org.au/
 ---
+table css class: table table-striped
 event: ALRMdisplay_final_screen
 # Display a summary of the awnsers submitted a table of the selected referrals and a document of the referrals that can be downloaded or emailed to you 
 
@@ -67,17 +108,16 @@ subquestion: |
   %else:
   Category|${ALRMkeyterm.true_values()}
   Locations Selected|${ALRMlocation.true_values()}
-  
 
   **Please see below for a list of relvevant specified services curated for ${ALRMinitals} with reference to the information you have provided today.** 
   
-  You have the ability to download or email a copy of this list below. 
+  You have the ability to download or email a copy of this list with the organisations adress, phone and email addiotnally included below. 
   
   *Disclaimer: Please note that CSP Connect is not responsible for keeping the referral system up to date. Some services identified may have changed contact details or be currently closed.*
   
-
+ 
   ${ALRMselected_services_table}
-  %endif 
+   %endif
   
 # A document is attached that uses Jinja2, including the choices that have been made and a for loop to implement and an appenended list of services 
 attachment:
@@ -101,17 +141,6 @@ columns:
       row_item['service']
   - Website: |
       row_item['website']
-  - Phone: |
-      row_item['phone']
-  - Email: |
-      row_item['email']  
-  - Address: |
-      row_item['address']
-  - Age Range: |
-      'From {} to {}'.format(row_item['min_age'], row_item['max_age'])
-  - Gender: |
-      row_item['gender']
-
 ---
 # Iteration to appened the referral list
 code: |
