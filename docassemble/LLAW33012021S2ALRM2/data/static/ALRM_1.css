@@ -12,11 +12,14 @@
   }
 }
 .navbar{
-  background-color: rgb(193,49,40) !important;
+  background-color: rgb(0,0,0) !important;
 }
 
+.navbar .navbar-brand{
+    color : rgb(255,255,255);
+}
 .navbar .nav-item a{
-    color: rgb(0,0,0) !important;
+    color: rgb(255,255,255) !important;
 }
 
 .navbar .dropdown-menu{
@@ -28,7 +31,7 @@
 }
 
 .text-muted{
-  color: rgb(0,0,0) !important;
+  color: rgb(255,255,255) !important;
 }
 
 .btn-danger{
@@ -60,9 +63,13 @@
   border-color: rgb(0,0,0);
 }
 
-.btn-warning:hover{
-  color: rgb(193,49,40);
+.btn-primary:hover{
+  color: rgb(253,248,48);
   background-color: rgb(0,0,0);
   border-color: rgb(0,0,0);
+}
+
+.svg-inline--fa.fa-question-circle.fa-w-16{
+   color: rgb(253,248,48);
 }
 
