@@ -37,7 +37,7 @@ features:
 ---
 # Imputs the logo
 objects:
-  - ALRMlogo: DAStaticFile.using(filename='ALRM_logo.png')
+  - ALRMlogo: DAStaticFile.using(filename='ALRM_logo1.png')
 ---
 #dictates the size of the FLPN logo
 mandatory: true
