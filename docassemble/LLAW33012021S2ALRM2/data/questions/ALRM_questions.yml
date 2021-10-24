@@ -2,7 +2,15 @@
 ---
 # This is the cache for images used for the icons in keyword question
 images:
-  pic: calendar.png
+  FV: Domestic_Violence_Icon.png
+  MENTH: Mental_Health_Icon.png
+  SA: Substance_Abuse_Icon.png
+  HM: Home_Icon.png
+  BAIL: Bail_Icon.png
+  FNCE: Financial_Assistance_Icon.png
+  DI: Mental_Dissability_Icon.png
+  DP: Disability_Icon.png
+  MEDH: Medical_Icon.jpg
 ---
 # Initals are being used to identify the client for administrative reasons without comprimising privacy
 
@@ -24,9 +32,9 @@ fields:
   - no label: ALRMgender
     datatype: radio
     choices:
-      - Male: M
-      - Female: F 
-      - Prefer not to specify: P
+      - Male
+      - Female
+      - Prefer not to specify
 ---
 # icons added to clarify choices and for engagment purposes
 question: Category
@@ -39,24 +47,24 @@ fields:
   - no label: ALRMkeyterm
     datatype: checkboxes
     choices:
-      - "Family violence": violence
-        image: pic
-      - "Mental Health": mental
-        image: pic
-      - "Drug or alcohol abuse": substance
-        image: pic
-      - "Homelessness": homeless
-        image: pic
-      - "Need of an address for bail": bail
-        image: pic
-      - "Finacial": finace
-        image: pic
-      - "Disability (Intellectual)": disintellect
-        image: pic
-      - "Disability (Physical)": disphysical
-        image: pic
-      - "Medical Health": medical 
-        image: pic
+      - Family violence: Family violence
+        image: FV
+      - Mental Health: Mental Health
+        image: MENTH
+      - Drug or alcohol abuse: Drug or alcohol abuse
+        image: SA
+      - Homelessness: Homelessness
+        image: HM
+      - Need of an address for bail: Need of an address for bail
+        image: BAIL
+      - Finacial: Finacial
+        image: FNCE
+      - Disability (Intellectual): Disability (Intellectual)
+        image: DI
+      - Disability (Physical): Disability (Physical)
+        image: DP
+      - Medical Health: Medical Health
+        image: MEDH
 ---
 # help que added to pop up on the side in order to indetify what suburbs are included, the list however is not exaustive. An interative map would be more helpful
 question: Location
@@ -67,11 +75,17 @@ subquestion: |
   You may select more than one location
   
   Click the question icon to see specifics of each region.
+  
+   If you are unsure of the relevant region, you can try browsing this map:
+  <div class="refusal-map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248956.58478148535!2d138.68909503461902!3d-34.93047901614914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1620128217527!5m2!1sen!2sau" style="border:0;" allowfullscreen="" loading="lazy" class="refusal-map"></iframe>
+  </div>
+  
 fields:
   - no label: ALRMlocation
     datatype: checkboxes
     choices:
-      - City suburbs: metro
+      - City suburbs: City suburbs
         help: | 
           - Adelaide
           - Prospect 
@@ -79,10 +93,10 @@ fields:
           - Croyden
           - Bowden
           - Burnside
-      - Port Augusta, Whyalla or Ceduna: APY
+      - Port Augusta, Whyalla or Ceduna: Port Augusta, Whyalla or Ceduna
         help: | 
           - Located on the west coast of the gulf of the Eyre Peninsula 
-      - Port Adelaide region: port
+      - Port Adelaide region: Port Adelaide region
         help: | 
           - North Western Suburbs of Adelaide 
           - Alberton 
@@ -91,32 +105,33 @@ fields:
           - Queenstown 
           - Semaphore South
           - Port Adelaide
-          - Gillman 
-      - Southern Suburbs: south
+          - Gillman
+      - Southern Suburbs: Southern Suburbs
         help: | 
           - Marion
           - Morphett vale
           - Seaford
           - Noarlunga
           - Aldinga
-      - Northern suburbs: north
+      - Northern suburbs: Northern suburbs
         help: | 
           - Elizabeth
           - Sailsbury 
           - Muno Para
-      - Eastern suburbs: east
+      - Eastern suburbs: Eastern suburbs
         help: | 
           - Klemzig
           - Gillis planes
           - Ingle farm
           - Modbury
-      - Mt Gambier region: gambier
+      - Mt Gambier region: Mt Gambier region
         help: | 
           - Naracoorte 
           - Robe
           - Millicent
-      - Riverland: riverland
-        help: | 
+      - Riverland: Riverland
+        help: |
           - Renmark
           - Berri
+      - Murray Bridge: Murray Bridge
 ---
