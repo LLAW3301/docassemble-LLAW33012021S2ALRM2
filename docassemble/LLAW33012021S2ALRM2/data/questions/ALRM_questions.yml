@@ -60,7 +60,7 @@ fields:
         image: HM
       - Need of an address for bail: Need of an address for bail
         image: BAIL
-      - Finacial: Finacial
+      - Financial: Finacial
         image: FNCE
       - Disability (Intellectual): Disability (Intellectual)
         image: DI
