@@ -21,13 +21,11 @@ subquestion: |
 
 fields:
   - no label: ALRMinitals
-    default: ${ ALRM_default_i }
 ---
 question: What is the clients age?
 fields:
   - no label: ALRMage
     datatype: integer
-    default: ${ ALRM_default_a }
 ---
 question: What is the clients gender?
 fields:
@@ -37,7 +35,6 @@ fields:
       - Male
       - Female
       - Prefer not to specify
-    default: ${ ALRM_default_g }
 ---
 # icons added to clarify choices and for engagment purposes
 question: Category
@@ -68,7 +65,6 @@ fields:
         image: DP
       - Medical Health: Medical Health
         image: MEDH
-    default: ${ ALRM_default_c }
      
 ---
 # help que added to pop up on the side in order to indetify what suburbs are included, the list however is not exaustive. An interative map would be more helpful
@@ -139,7 +135,6 @@ fields:
           - Renmark
           - Berri
       - Murray Bridge: Murray Bridge
-    default: ${ ALRM_default_l }
 ---
 code: |
   ALRM_default_i = 'ALRM'
