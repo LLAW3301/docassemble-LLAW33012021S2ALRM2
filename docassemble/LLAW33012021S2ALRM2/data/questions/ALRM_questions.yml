@@ -1,20 +1,45 @@
-question: What is you client initals?
+# This .yml file contains all the questions to run the app
+---
+# This is the cache for images used for the icons in keyword question
+images:
+  FV: Domestic_Violence_Icon.png
+  MENTH: Mental_Health_Icon.png
+  SA: Substance_Abuse_Icon.png
+  HM: Home_Icon.png
+  BAIL: Bail_Icon.png
+  FNCE: Financial_Assistance_Icon.png
+  DI: Mental_Dissability_Icon.png
+  DP: Disability_Icon.png
+  MEDH: Medical_Icon.jpg
+---
+# Initals are being used to identify the client for administrative reasons without comprimising privacy
+
+question: Please add a way to identify the client?
+subquestion: | 
+
+  Please add the clients intials or a way to identify them without using their full name. This is to allow ALRM to keep track of which services have been utilised for specified referral with each respective client.
+
 fields:
   - no label: ALRMinitals
+    default: ${ ALRM_default_i }
 ---
-question: What is the clinets age?
+question: What is the clients age?
 fields:
   - no label: ALRMage
     datatype: integer
+    default: ${ ALRM_default_a }
 ---
-question: What is the clinets gender?
+question: What is the clients gender?
 fields:
   - no label: ALRMgender
     datatype: radio
     choices:
-      - Male: M
-      - Female: F   
+      - Male
+      - Female
+      - Prefer not to specify
+    default: ${ ALRM_default_g }
 ---
+# icons added to clarify choices and for engagment purposes
 question: Category
 subquestion: |
   Please select the categories which best describes the clients issue/s
@@ -25,28 +50,100 @@ fields:
   - no label: ALRMkeyterm
     datatype: checkboxes
     choices:
-      - Family violence: violence
-      - Mental Health: mental
-      - Drug or alcohol abuse: substance
-      - Homelessness: homeless
-      - Need of an address for bail: bail
-      - Finacial: finace
-      - Disability (Intellectual): disintellect
-      - Disability (Physical): disphysical
-      - Medical Health: medical 
+      - Family violence: Family violence
+        image: FV
+      - Mental Health: Mental Health
+        image: MENTH
+      - Drug or alcohol abuse: Drug or alcohol abuse
+        image: SA
+      - Homelessness: Homelessness
+        image: HM
+      - Need of an address for bail: Need of an address for bail
+        image: BAIL
+      - Financial: Finacial
+        image: FNCE
+      - Disability (Intellectual): Disability (Intellectual)
+        image: DI
+      - Disability (Physical): Disability (Physical)
+        image: DP
+      - Medical Health: Medical Health
+        image: MEDH
+    default: ${ ALRM_default_c }
+     
 ---
-
+# help que added to pop up on the side in order to indetify what suburbs are included, the list however is not exaustive. An interative map would be more helpful
 question: Location
 subquestion: |
-  Please select the location or locations in which you are looking
+  Please select the location/s in which you are looking
   for services.
   
   You may select more than one location
+  
+  Click the question icon to see specifics of each region.
+  
+   If you are unsure of the relevant region, you can try browsing this map:
+  <div class="refusal-map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248956.58478148535!2d138.68909503461902!3d-34.93047901614914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1620128217527!5m2!1sen!2sau" style="border:0;" allowfullscreen="" loading="lazy" class="refusal-map"></iframe>
+  </div>
+  
 fields:
   - no label: ALRMlocation
     datatype: checkboxes
     choices:
-      - Metropolitan Adelaide (within a 20km radius): metro
-      - Port Augusta or Ceduna: APY
-      - Port Adelaide: port
+      - City suburbs: City suburbs
+        help: | 
+          - Adelaide
+          - Prospect 
+          - Hindmarsh
+          - Croyden
+          - Bowden
+          - Burnside
+      - Port Augusta, Whyalla or Ceduna: Port Augusta, Whyalla or Ceduna
+        help: | 
+          - Located on the west coast of the gulf of the Eyre Peninsula 
+      - Port Adelaide region: Port Adelaide region
+        help: | 
+          - North Western Suburbs of Adelaide 
+          - Alberton 
+          - Ethelton
+          - New Port 
+          - Queenstown 
+          - Semaphore South
+          - Port Adelaide
+          - Gillman
+      - Southern Suburbs: Southern Suburbs
+        help: | 
+          - Marion
+          - Morphett vale
+          - Seaford
+          - Noarlunga
+          - Aldinga
+      - Northern suburbs: Northern suburbs
+        help: | 
+          - Elizabeth
+          - Sailsbury 
+          - Muno Para
+      - Eastern suburbs: Eastern suburbs
+        help: | 
+          - Klemzig
+          - Gillis planes
+          - Ingle farm
+          - Modbury
+      - Mt Gambier region: Mt Gambier region
+        help: | 
+          - Naracoorte 
+          - Robe
+          - Millicent
+      - Riverland: Riverland
+        help: |
+          - Renmark
+          - Berri
+      - Murray Bridge: Murray Bridge
+    default: ${ ALRM_default_l }
 ---
+code: |
+  ALRM_default_i = 'ALRM'
+  ALRM_default_a = '22'
+  ALRM_default_g = 'Female'
+  ALRM_default_c= 'Family violence'
+  ALRM_default_l = 'City suburbs'
